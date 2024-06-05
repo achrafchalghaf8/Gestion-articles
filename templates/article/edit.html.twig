@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Modification d'un article
+{% endblock %}
+
+{% block body %}
+
+	<h1>Modification d'un article</h1>
+
+	{{include("article/_form.html.twig", {valeurBtnSubmit: "Mettre à jour l'article"})}}
+
+{% endblock %}

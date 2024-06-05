@@ -1,0 +1,10 @@
+{{ form_start(formArticle)}}
+
+{{ form_row(formArticle.reference, {'attr': {'placeholder': "Référence de l'article"}, 'help': 'La référence doit avoir ce format: ABCD-123'})}}
+
+{{ form_row(formArticle.libelle, {'attr': {'placeholder': "Libellé de l'article"}})}}
+{{ form_row(formArticle.prix, {'attr': {'placeholder': "Prix de l'article"}})}}
+{{ form_row(formArticle.categorie)}}
+<input type="submit" value="{{valeurBtnSubmit|default("Ajouter l'article") }}" class="btn btn-primary" formnovalidate>
+
+{{ form_end(formArticle)}}

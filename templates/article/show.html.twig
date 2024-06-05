@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{article.reference}}
+{% endblock %}
+
+{% block body %}
+
+	<h2>{{article.libelle}}
+		({{article.reference}})</h2>
+	<p>Prix:
+		{{article.prix}}
+		D</p>
+
+	<p>
+		{# {% if is_granted('ROLE_ADMIN') %} #}
+
+		<a href="{{ path('article_edit', {id: article.id})}}">Modifier</a>
+		|
+		<a href="{{ path('article_delete', {id: article.id})}}" onclick="return confirm('Etes-vous sur de supprimer l\'article {{article.reference}}?')">Supprimer</a>
+		|
+		{# {% endif %} #}
+		<a href="{{ path('app_home')}}">Liste des articles</a>
+	</p>
+{% endblock %}
